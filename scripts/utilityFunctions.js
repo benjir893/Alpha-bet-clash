@@ -23,3 +23,8 @@ function generateRandomAlphabet(){
     const getrandomAlphabet = alphabetsArray[randomIndex];
     return getrandomAlphabet;
 }
+
+function scoring(){
+    const sum = 0;
+    
+}
