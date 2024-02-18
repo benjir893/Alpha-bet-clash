@@ -7,25 +7,36 @@ function randomAlphabet(){
 }
 
 document.addEventListener('keyup', function keyPressed(event){
-    console.log(event.key);
-    let score = 0;
-    const scoreTxt = document.getElementById('score');
-    // const scoreNumber = parseInt(scoreTxt.innerText);
+    
 
     const displayRandomAlphabet = document.getElementById('displayRandomAlphabet');
     const character = displayRandomAlphabet.innerText;
     const InnerTxt = character.toLowerCase();
     
     if(event.key === InnerTxt){
-        // console.log('you are winner');
-        score += 1;
-        scoreTxt.innerText= score;
+       const scoreTxt = document.getElementById('score');
+       const scorevalue = scoreTxt.innerText;
+       const score = parseInt(scorevalue);
+       const newScore = score +1;
+       scoreTxt.innerText = newScore;
+       removeBackGround(InnerTxt);
         randomAlphabet();
-        return score;
+        
     }
     else{
         console.log('you have pressed wrong key');
-        randomAlphabet();
+        const lifeTxt = document.getElementById('life');
+        const lifeValue = lifeTxt.innerText;
+        const lifeScore = parseInt(lifeValue);
+        const newLifeScore = lifeScore-1;
+        lifeTxt.innerText = newLifeScore;
+        if(newLifeScore >0){
+            removeBackGround(InnerTxt);
+            randomAlphabet();
+        }
+        else{
+            screenShow('finalScore');
+        }
     }
 
 })
