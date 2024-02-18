@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commentPage</title>
+    <!-- daisy ui and tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="mx-8 my-8 bg-slate-100 text-blue-950 font-semibold font-medium">
+    <div id="container" class="">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab nobis tenetur, rerum, facere fugiat ducimus, temporibus fugit qui inventore magni fuga. Quia sed reprehenderit impedit cum corporis nostrum ratione ipsum a expedita placeat voluptatibus assumenda laboriosam, omnis tenetur dolores esse.</p>
+        <br>
+        <p>Voluptates odit dicta voluptatibus repellat explicabo porro cupiditate sed, facere minus sequi voluptas mollitia! A laborum autem iste distinctio, quae harum odit rem exercitationem quibusdam in non accusamus asperiores vel iure vitae vero obcaecati praesentium fuga doloribus! Commodi, voluptates ut.</p>
+        <br>
+        <p>Sunt reprehenderit blanditiis rem in quos, aliquam quasi tempore porro ipsam quia vitae praesentium suscipit quae magni corporis, veniam itaque ratione sed laboriosam ullam hic! Facere totam distinctio culpa, magni quia libero unde deserunt perferendis dolorum adipisci ipsa ad cupiditate.</p>
+        <br>
+        <p>Necessitatibus perspiciatis fugiat quam, obcaecati quia autem pariatur, quos, assumenda error ipsa eum hic quisquam nesciunt ad! Rem ducimus adipisci debitis dolor soluta expedita laboriosam totam architecto eos! Est praesentium veritatis facere magnam numquam deleniti placeat quas excepturi odio aspernatur.</p>
+        <br>
+        <p>Blanditiis eveniet tempore voluptate ea, cupiditate dicta eligendi laudantium nisi. Error labore incidunt eum, deserunt nemo nostrum deleniti quos perspiciatis voluptas enim ullam optio modi provident numquam. Minus corrupti voluptatum cupiditate, quae aliquam consequuntur distinctio autem molestiae, modi repellendus sapiente.</p>
+        <br>
+    </div>
+    <div class="mt-5">
+        <textarea name="" id="txtArea" cols="50" rows="10" class="border-2 border-s-orange-200"></textarea>
+        <br>
+        <button onclick="commentPost()" class="btn bg-orange-400 px-4 py-2 text-xl text-white font-semibold ">Post your comment</button>
+        <button class="btn bg-orange-400 px-4 py-2 text-xl text-white font-semibold "><a href="index.html">Back to the Game</a></button>
+    </div>
+    <script>
+        function commentPost(){
+            const txtArea = document.getElementById('txtArea');
+            const txtValue = txtArea.value;
+            
+            const container = document.getElementById('container')
+            const par =document.createElement('p');
+            par.innerText = txtValue;
+            container.appendChild(par);
+            txtArea.value = '';
+        }
+    </script>
+</body>
+</html>
