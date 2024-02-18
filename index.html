@@ -22,7 +22,7 @@
            </div>
         </section>
         <!-- play ground -->
-        <section id="playGoundScreen" class="hidden">
+        <section id="playGroundScreen" class="hidden">
             <!-- display start -->
             <div class="flex flex-col justify-center items-center">
                 <div class="artboard artboard-horizontal phone-6 border-8 border-[#FBF5E9CC] bg-[#6EFFE899] rounded-md mt-20 mb-5 ">
@@ -85,11 +85,12 @@
            </div>
            <!-- button ends -->
         </section>
+        <!-- playGoundScreen section ends -->
         <!-- score section starts -->
         <section id="finalScore" class="min-h-screen flex flex-col justify-center items-center hidden">
             <div class="flex flex-col justify-center items-center gap-5 bg-[#FFFFFF26] drop-shadow rounded-lg px-4 py-4">
-                <h1 class="text-6xl font-semibold">Score : <span id="">14</span></h1>
-                <button class="btn">Play Again</button>
+                <h1 class="text-6xl font-semibold">Score : <span id="finalScoreDisplay">14</span></h1>
+                <button onclick="playAgainbtnFunction()" id="playAgain" class="btn">Play Again</button>
                 <p class="">practice will make you pro</p>
             </div>
         </section>
